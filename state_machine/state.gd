@@ -1,5 +1,8 @@
 extends Node
 
+# warning-ignore:unused_signal
+signal finished(next_state_name)
+
 func enter():
 	pass
 

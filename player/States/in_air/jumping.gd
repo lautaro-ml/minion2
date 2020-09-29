@@ -4,9 +4,7 @@ export(float) var base_max_horizontal_speed = 400.0
 
 export(float) var air_acceleration = 1000.0
 export(float) var air_deceleration = 2000.0
-export(float) var air_steering_power = 50.0
-
-export(float) var gravity = 1600.0
+export(float) var air_steering_power = 500.0
 
 var enter_velocity = Vector2()
 
@@ -28,7 +26,7 @@ func enter():
 	update_look_direction(input_direction)
 
 	horizontal_velocity = enter_velocity if input_direction else Vector2()
-	vertical_speed = 600.0
+	vertical_speed = 155.0
 
 
 func update(delta):
@@ -59,5 +57,4 @@ func animate_jump_height(delta):
 	vertical_speed -= gravity * delta
 	height += vertical_speed * delta
 	height = max(0.0, height)
-
-	#player.get_node("BodyPivot").position.y = -height
+	player.position.y = -height

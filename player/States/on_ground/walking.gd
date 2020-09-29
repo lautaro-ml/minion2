@@ -1,8 +1,9 @@
 extends "on_ground.gd"
 
-export(float) var max_walk_speed = 450
+export(float) var max_walk_speed = 150
 
 func enter():
+	print("entering")
 	speed = 0.0
 	velocity = Vector2()
 
@@ -16,6 +17,7 @@ func handle_input(event):
 
 func update(_delta):
 	var input_direction = get_input_direction()
+
 	if not input_direction:
 		emit_signal("finished", "idle")
 	update_look_direction(input_direction)
@@ -28,7 +30,7 @@ func update(_delta):
 
 func move(speed, direction):
 	velocity = direction.normalized() * speed
-	player.move_and_slide(velocity, Vector2(), 5, 2)
+	player.move_and_slide(velocity, Vector2(0,-1), 5)
 	if player.get_slide_count() == 0:
 		return
 	return player.get_slide_collision(0)

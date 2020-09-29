@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pentagono.png-2b28a5030e622c29299d62b845cf4393.stex"
+path="res://.import/pentagono.png-60985a735cff5925abbfd24c837a459b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minion-2020s2-fisica-2d/pentagono.png"
-dest_files=[ "res://.import/pentagono.png-2b28a5030e622c29299d62b845cf4393.stex" ]
+source_file="res://other_sprites/pentagono.png"
+dest_files=[ "res://.import/pentagono.png-60985a735cff5925abbfd24c837a459b.stex" ]
 
 [params]
 

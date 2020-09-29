@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cadena.png-ca921af9593fa84bff107720a489f05e.stex"
+path="res://.import/cadena.png-462db18060c06c1ff0c2737135445746.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minion-2020s2-fisica-2d/cadena.png"
-dest_files=[ "res://.import/cadena.png-ca921af9593fa84bff107720a489f05e.stex" ]
+source_file="res://other_sprites/cadena.png"
+dest_files=[ "res://.import/cadena.png-462db18060c06c1ff0c2737135445746.stex" ]
 
 [params]
 

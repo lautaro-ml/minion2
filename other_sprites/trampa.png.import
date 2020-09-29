@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trampa.png-3a5282141993a14b4ff5cf1b1344ff49.stex"
+path="res://.import/trampa.png-5849f70c6077cf74cfa1818f00fdd89f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minion-2020s2-fisica-2d/trampa.png"
-dest_files=[ "res://.import/trampa.png-3a5282141993a14b4ff5cf1b1344ff49.stex" ]
+source_file="res://other_sprites/trampa.png"
+dest_files=[ "res://.import/trampa.png-5849f70c6077cf74cfa1818f00fdd89f.stex" ]
 
 [params]
 

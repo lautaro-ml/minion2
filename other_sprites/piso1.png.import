@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/piso1.png-84b71e25e0b8ced095fe0296c03c7f8b.stex"
+path="res://.import/piso1.png-824678f29077a7ad1032f8be2292b94f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minion-2020s2-fisica-2d/piso1.png"
-dest_files=[ "res://.import/piso1.png-84b71e25e0b8ced095fe0296c03c7f8b.stex" ]
+source_file="res://other_sprites/piso1.png"
+dest_files=[ "res://.import/piso1.png-824678f29077a7ad1032f8be2292b94f.stex" ]
 
 [params]
 

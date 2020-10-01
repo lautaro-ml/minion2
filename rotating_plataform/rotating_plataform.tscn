@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://rotating_plataform/trampa.png" type="Texture" id=1]
+[ext_resource path="res://rotating_plataform/rotating_plataform_behavior.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.49619, 24.2224 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6.59553, 35.8903 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 42.1717, 6.41097 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 59.1467, 6.70613 )
+
+[node name="rotating_plataform" type="RigidBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 11.7386, 5.82647 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="v_left" type="CollisionShape2D" parent="."]
+position = Vector2( -82.2462, -17.5276 )
+shape = SubResource( 1 )
+
+[node name="v_right" type="CollisionShape2D" parent="."]
+position = Vector2( 105.649, 29.4461 )
+shape = SubResource( 1 )
+
+[node name="v_central" type="CollisionShape2D" parent="."]
+position = Vector2( -0.141052, 5.69562 )
+shape = SubResource( 2 )
+
+[node name="h_left" type="CollisionShape2D" parent="."]
+position = Vector2( -46.4217, -0.026525 )
+rotation = 3.14159
+shape = SubResource( 3 )
+
+[node name="h_right" type="CollisionShape2D" parent="."]
+position = Vector2( 53.0191, 0.152245 )
+shape = SubResource( 4 )

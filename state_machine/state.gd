@@ -1,10 +1,15 @@
 extends Node
 
+var plataform_vector = Vector2.ZERO
+
 # warning-ignore:unused_signal
 signal finished(next_state_name)
 
 func enter():
 	pass
+
+func name():
+	return ""
 
 func exit():
 	pass

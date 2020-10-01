@@ -11,11 +11,21 @@ func _ready():
 		"jumping" : jumping,
 	}
 
+func init(player):
+	for state in states_map.values():
+		state.player = player
+
+func update_plataform_vector(force):
+	for state in states_map.values():
+		state.plataform_vector = force
+
+func stop_plataform_vector():
+	for state in states_map.values():
+		state.plataform_vector = Vector2.ZERO
+
 func _change_state(state_name):
 	if not _active:
 		return
-	if state_name in ["jumping"]:
+	if state_name == "jumping":
 		states_stack.push_front(states_map[state_name])
-	if state_name == "jumping" and current_state == walking:
-		jumping.initialize(walking.speed, walking.velocity)
 	._change_state(state_name)

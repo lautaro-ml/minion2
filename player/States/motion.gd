@@ -1,16 +1,13 @@
 extends "res://state_machine/state.gd"
 
-onready var player
-export (int) var gravity = 1600
-
-func handle_input(event):
-	if event.is_action_pressed("jumping"):
-		emit_signal("finished", "jumping")
+var player
+export (int) var gravity    = 98
+export (int) var jump_speed = 0
 
 func get_input_direction():
 	var input_direction = Vector2(
-			Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 
-			gravity * 0.0016
+			(Input.get_action_strength("move_right") - Input.get_action_strength("move_left")) * 100, 
+			jump_speed
 	)
 	return input_direction
 

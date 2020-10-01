@@ -3,7 +3,6 @@ extends "on_ground.gd"
 export(float) var max_walk_speed = 150
 
 func enter():
-	print("entering")
 	speed = 0.0
 	velocity = Vector2()
 
@@ -30,7 +29,14 @@ func update(_delta):
 
 func move(speed, direction):
 	velocity = direction.normalized() * speed
-	player.move_and_slide(velocity, Vector2(0,-1), 5)
+	if plataform_vector.y < 0:
+		velocity.y = plataform_vector
+	else:
+		if player.body_below() != null:
+			velocity.y = 0
+		else:
+			velocity.y = gravity
+	player.move_and_slide(velocity, Vector2.UP, 5)
 	if player.get_slide_count() == 0:
 		return
 	return player.get_slide_collision(0)

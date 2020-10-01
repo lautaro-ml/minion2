@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player/MotionStatesHandler.gd" type="Script" id=1]
 [ext_resource path="res://Player/States/on_ground/idle.gd" type="Script" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://player/PlayerBehavior.gd" type="Script" id=4]
 [ext_resource path="res://player/violeta.png" type="Texture" id=5]
 [ext_resource path="res://player/States/in_air/jumping.gd" type="Script" id=6]
-[ext_resource path="res://player/use_telekinesis.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.7993, 11.754 )
@@ -27,15 +26,9 @@ script = ExtResource( 3 )
 [node name="Jumping" type="Node" parent="motion_states"]
 script = ExtResource( 6 )
 
-[node name="use_telekinesis" type="Node" parent="."]
-script = ExtResource( 7 )
-
 [node name="PlayerSprite" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 5 )
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-enabled = true

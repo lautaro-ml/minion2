@@ -42,12 +42,12 @@ func set_active(value):
 		states_stack = []
 		current_state = null
 
-
 func _unhandled_input(event):
 	current_state.handle_input(event)
 
 
 func _physics_process(delta):
+	#print(current_state.name())
 	current_state.update(delta)
 
 

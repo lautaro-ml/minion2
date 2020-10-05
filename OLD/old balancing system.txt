@@ -1,0 +1,19 @@
+	#print(str(get_instance_id()) + str(down_force) + str(total_force))
+#	if get_instance_id() == 1272:
+#		pass
+#		print(str(get_slide_count()) + str(down_force) + str(get_instance_id()))
+#	sum_forces = 0
+#	if get_slide_count() > 0:
+#		for i in get_slide_count():
+#			var collition = get_slide_collision(i)
+#			if collition.collider.get_class() == "KinematicBody2D" and collition.collider.body_below() == self:
+#				if collition.collider.name == "Player":
+#					sum_forces += 19.6
+#				if collition.collider.name == "Box":
+#					sum_forces += 9.8
+#				if down_force < counter_weight.down_force:
+#					emit_signal("move_up", down_force - counter_weight.down_force)
+#			if collition.collider.get_class() == "StaticBody2D":
+				#print(str(counter_weight.down_force))
+#				emit_signal("stop")
+#	down_force.y = sum_forces

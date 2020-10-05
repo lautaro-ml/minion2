@@ -2,6 +2,14 @@ extends KinematicBody2D
 
 var player
 var mouse_in = false
+var weight = Vector2(0,9.8)
+var is_plataform = false
+
+func _unhandled_input(event):
+	if event.is_action_pressed("debug"):
+		print(str(get_instance_id()) + ":")
+		print($State_handler.current_state.plataform_vector)
+		#print(weight)
 
 func _ready():
 	$State_handler.init(self, player)
@@ -35,3 +43,13 @@ func _on_Box_mouse_entered():
 
 func _on_Box_mouse_exited():
 	mouse_in = false
+
+
+func _on_Area2D_body_shape_entered(body_id, body, body_shape, area_shape):
+	if body.get_class() == "KinematicBody2D" and !body.is_plataform and get_instance_id() != body_id:
+		weight += body.weight
+
+
+func _on_Area2D_body_shape_exited(body_id, body, body_shape, area_shape):
+	if body.get_class() == "KinematicBody2D" and !body.is_plataform and get_instance_id() != body_id:
+		weight -= body.weight

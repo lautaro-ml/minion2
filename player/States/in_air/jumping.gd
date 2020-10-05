@@ -1,7 +1,7 @@
 extends "../motion.gd"
 
 func enter():
-	jump_speed = -155
+	jump_speed = -165
 
 func update(_delta):
 	var input_direction = get_input_direction()

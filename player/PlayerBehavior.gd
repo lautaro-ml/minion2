@@ -1,8 +1,16 @@
 extends KinematicBody2D
 
 var look_direction = Vector2.RIGHT setget set_look_direction
+var weight = Vector2(0,19.6)
+var is_plataform = false
 
 signal direction_changed(new_direction)
+
+func _unhandled_input(event):
+	if event.is_action_pressed("debug"):
+		#print(str(get_instance_id()) + ":")
+		#print($motion_states.current_state.plataform_vector)
+		pass
 
 func follow_plataform(force):
 	$motion_states.update_plataform_vector(force)

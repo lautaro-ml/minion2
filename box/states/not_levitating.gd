@@ -39,6 +39,6 @@ func update(_delta):
 		if plataform_vector.y < 0:
 			box.move_and_slide(plataform_vector)
 		else:
-			box.move_and_slide(Vector2(0, gravity))
+			box.move_and_slide(Vector2(0, gravity * 2))
 	if finished:
 		emit_signal("finished", "levitating")

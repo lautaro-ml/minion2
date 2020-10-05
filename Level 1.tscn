@@ -110,3 +110,15 @@ shape = SubResource( 4 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 5.65683, -251.357 )
 current = true
+
+[node name="RichTextLabel" type="Label" parent="."]
+margin_left = -446.147
+margin_top = -484.004
+margin_right = -185.147
+margin_bottom = -436.004
+text = "WASD to move
+Space to jump
+Click on a box and release to move them"
+__meta__ = {
+"_edit_use_anchors_": false
+}

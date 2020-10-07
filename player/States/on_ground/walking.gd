@@ -1,4 +1,4 @@
-extends "on_ground.gd"
+extends "res://player/States/on_ground/on_ground.gd"
 
 export(float) var max_walk_speed = 150
 

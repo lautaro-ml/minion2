@@ -1,4 +1,4 @@
-extends "../motion.gd"
+extends "res://player/States/motion.gd"
 
 func enter():
 	jump_speed = -165

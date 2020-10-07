@@ -14,7 +14,6 @@ func _ready():
 
 func update_plataform_vector(force):
 	for state in states_map.values():
-		var ret = Vector2(0, force.y - 0.1)
 		state.plataform_vector = force
 
 func stop_plataform_vector():

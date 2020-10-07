@@ -17,3 +17,33 @@
 				#print(str(counter_weight.down_force))
 #				emit_signal("stop")
 #	down_force.y = sum_forces
+
+func _physics_process(_delta):
+	down_force = total_weight()
+	_update_bodies_above()
+	if counter_weight.old_force != counter_weight.total_force:
+		if counter_weight.total_force.y != 0:
+			up_force = counter_weight.down_force
+		else: up_force = down_force
+	old_force = total_force
+	total_force = move_and_slide(down_force - up_force)
+	
+	#total_force = move_and_slide(down_force - up_force)
+	#_update()
+	
+func _update():
+	down_force = total_weight()
+	if counter_weight.old_force != counter_weight.total_force:
+		if counter_weight.total_force.y != 0:
+			up_force = counter_weight.down_force
+		else: up_force = down_force
+	old_force = total_force
+	_update_bodies_above()
+	
+	
+	
+
+
+
+
+

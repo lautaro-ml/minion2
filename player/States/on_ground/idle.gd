@@ -1,4 +1,4 @@
-extends "on_ground.gd"
+extends "res://player/States/on_ground/on_ground.gd"
 
 func handle_input(event):
 	return .handle_input(event)
